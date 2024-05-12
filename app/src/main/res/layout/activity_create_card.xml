@@ -2,50 +2,56 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:background="@color/black"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
+    android:background="@drawable/bg7"
     android:gravity="center"
+    android:orientation="vertical"
     android:padding="20dp"
     tools:context=".CreateCard">
+
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Enter Details"
-        android:textColor="@color/white"
-        android:textSize="36sp"
+        android:fontFamily="@font/poppins"
         android:gravity="center"
-        android:fontFamily="sans-serif"/>
+        android:text="@string/enter_task_details"
+        android:textColor="@color/black"
+        android:textSize="36sp" />
+
     <EditText
         android:id="@+id/create_title"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Enter Task"
         android:layout_marginTop="30dp"
-        android:padding="15dp"
         android:background="@drawable/custom_edittetext"
-        android:textColorHint="#BFBBBB"
-        android:textColor="@color/white"
-        />
+        android:hint="@string/enter_task"
+        android:padding="15dp"
+        android:textColor="@color/black"
+        android:textColorHint="#4C4949" />
 
     <EditText
         android:id="@+id/create_priority"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
-        android:hint="Priority"
-        android:padding="15dp"
         android:background="@drawable/custom_edittetext"
-        android:textColorHint="#BFBBBB"
-        android:textColor="@color/white"
-        />
+        android:hint="@string/priority"
+        android:padding="15dp"
+        android:textColor="@color/black"
+        android:textColorHint="#4C4949" />
 
     <Button
         android:id="@+id/save_button"
-        android:layout_width="200dp"
-        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
         android:layout_marginTop="30dp"
-        android:text="Save"/>
+        android:fontFamily="@font/poppins"
+        android:text="@string/add_task"
+        android:textAllCaps="false"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:background="@drawable/custom_edittetext"
+        app:backgroundTint="@color/blue" />
 
 </LinearLayout>

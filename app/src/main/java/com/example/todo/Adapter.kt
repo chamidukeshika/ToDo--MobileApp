@@ -8,7 +8,7 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.todo.databinding.ViewBinding // Import ViewBinding class generated for your layout file
 
-class Adapter(private val data: List<CardInfo>) : RecyclerView.Adapter<Adapter.ViewHolder>() {
+class Adapter(private var data: List<CardInfo>) : RecyclerView.Adapter<Adapter.ViewHolder>() {
     class ViewHolder(private val binding: ViewBinding) : RecyclerView.ViewHolder(binding.root) {
         val title = binding.title
         val priority = binding.priority
@@ -24,7 +24,7 @@ class Adapter(private val data: List<CardInfo>) : RecyclerView.Adapter<Adapter.V
         val currentItem = data[position]
         when (currentItem.priority.toLowerCase()) {
             "high" -> holder.layout.setBackgroundColor(Color.parseColor("#F05454"))
-            "medium" -> holder.layout.setBackgroundColor(Color.parseColor("#EDC988"))
+            "medium" -> holder.layout.setBackgroundColor(Color.parseColor("#FFF3A00A"))
             else -> holder.layout.setBackgroundColor(Color.parseColor("#00917C"))
         }
 
@@ -39,5 +39,9 @@ class Adapter(private val data: List<CardInfo>) : RecyclerView.Adapter<Adapter.V
 
     override fun getItemCount(): Int {
         return data.size
+    }
+    fun setData(newData: List<CardInfo>) {
+        data = newData
+        notifyDataSetChanged()
     }
 }

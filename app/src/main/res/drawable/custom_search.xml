@@ -2,5 +2,5 @@
     <!-- Transparent solid color -->
     <solid android:color="#00000000"/> <!-- Fully transparent -->
     <stroke android:color="@color/blue" android:width="2dp"/> <!-- Semi-transparent blue stroke -->
-    <corners android:radius="10dp"/>
+    <corners android:radius="20dp"/>
 </shape>
